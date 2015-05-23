@@ -96,4 +96,16 @@ config EEPROM_DIGSY_MTC_CFG
 
 	  If unsure, say N.
 
+config EEPROM_FM33256B
+	tristate "Cypress FM33256B FRAM support"
+	depends on MFD_FM33256B
+	help
+	  This is a driver for the FRAM found in the Cypress FM33256B Processor
+	  Companion.
+
+	  The FRAM is exported as a binary sysfs file.
+
+	  This driver can also be built as a module. If so, the module
+	  will be called fm33256b-fram.
+
 endmenu
