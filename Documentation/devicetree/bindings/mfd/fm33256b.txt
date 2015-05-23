@@ -1,0 +1,30 @@
+Device-tree bindings for Cypress Semiconductor FM33256B Processor Companion
+---------------------------------------------------------------------------
+
+Required properties:
+- compatible: must be "cypress,fm33256b".
+- reg: SPI chip select
+- spi-max-frequency: Max SPI frequency to use (< 16000000)
+
+Optional properties:
+- cypress,charge-enabled: enable trickle charger
+- cypress,charge-fast: enable fast (1 mA) charging
+
+The MFD exposes two subdevices:
+- The FRAM: "cypress,fm33256b-fram"
+- The RTC: "cypress,fm33256b-rtc"
+
+Example:
+
+spi1: spi@f800800 {
+	status = "okay";
+	cs-gpios = <&pioC 25 0>;
+
+	fm33256b@0 {
+		compatible = "cypress,fm33256b";
+		spi-max-frequency = <10000000>;
+		cypress,charge-enabled;
+		cypress,charge-fast;
+		reg = <0>;
+	};
+};

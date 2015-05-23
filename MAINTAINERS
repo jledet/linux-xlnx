@@ -3261,6 +3261,14 @@ T:	git git://linuxtv.org/anttip/media_tree.git
 S:	Maintained
 F:	drivers/media/common/cypress_firmware*
 
+CYPRESS FM33256B PROCESSOR COMPANION DRIVER
+M:	Jeppe Ledet-Pedersen <jlp@gomspace.com>
+S:	Maintained
+F:	include/linux/mfd/fm33256b.h
+F:	drivers/mfd/fm33256b.c
+F:	drivers/misc/eeprom/fm33256b-fram.c
+F:	drivers/rtc/rtc-fm33256b.c
+
 CYTTSP TOUCHSCREEN DRIVER
 M:	Ferruh Yigit <fery@cypress.com>
 L:	linux-input@vger.kernel.org
